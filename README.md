@@ -1,4 +1,4 @@
-# MTA internal visuals
+# MTA CBDTP Visuals
 
 ## About the Project
 
