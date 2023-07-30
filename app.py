@@ -4,12 +4,12 @@ st.set_page_config(layout="wide")
 
 import threading
 
+import src.pages.front_page as front_page
+import src.pages.air_quality as air_quality
 import src.pages.monthly_averages as monthly_averages
 import src.pages.pickups_dropoffs as pickups_dropoffs
-import src.pages.air_quality as air_quality
 
 import ag_grid_hack
-
 
 import base64
 import json
@@ -18,9 +18,9 @@ import json
 
 PAGES = {
     "Central Business District Tolling Program": {
-        "TLC Monthly Averages": monthly_averages,
-        "TLC Pickups and Dropoffs": pickups_dropoffs,
         "NYC Air Quality": air_quality,
+        "TLC Monthly Averages": monthly_averages,
+        "TLC Pickups and Dropoffs": pickups_dropoffs
     }
 }
 
