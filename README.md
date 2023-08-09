@@ -10,24 +10,17 @@ The website is run using the [streamlit module](https://docs.streamlit.io/), and
 
 TLC data is currently updated monthly and DOH data is updated annually. The basic workflow to update the website is to 1) automatically pull the data to the CBDTP's container in MTA's Azure Blob Storage account, and 2) run each of the src/dataprocessing scripts, which aggregate the base data and upload aggregated datasets to the container. We do this to improve website performance. To see the website locally, run `streamlit run app.py` in your termminal.
 
-## Contributing
-
-See [CONTRIBUTING.MD](/CONTRIBUTING.MD).
-
 ## Project Organization
 
 ```
 ------------
 
   |--- MTA CBDTP Visuals           <- The top-level directory for this project: https://github.com/jiangpaul222/MTA.
-    |--- data
-    |     |--- processed              <- Processed datasets (lookup files)
-    |     |--- source                 <- Directory storing utility scripts, and scripts appearing on the external website. May have some redundancy with Orca reports
+    |--- data                      <- Processed datasets
     |
-    |
-    |--- src                          <- Directory storing data-processing and pages directories, as well as a tools.py script with common functions and an assets.py file
-    |     |--- dataprocessing         <- Scripts to aggregate raw data and push it to the S3 bucket. The internal website runs slower with bigger datasets, so this helps speed things up
-    |     |--- pages                  <- Scripts for webpages on the internal website
+    |--- src                          <- Directory storing data-processing and pages directories, as well as an assets.py file
+    |     |--- dataprocessing         <- Scripts from Databrick to aggregate raw TLC data
+    |     |--- pages                  <- Scripts for webpages on the website
 
   
 ```
