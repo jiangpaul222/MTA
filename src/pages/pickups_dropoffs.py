@@ -13,7 +13,6 @@ import src.assets
 # The GeoJSON file is my combination of taxi zones and CBDTP zones, which is currently stored in CBDTP's blob container in Azure - storageexplorer://?v=2&tenantId=79c07380-cc98-41bd-806b-0ae925588f66&type=fileSystemPath&path=CBD_Taxi.geojson&container=cbdtp-data&serviceEndpoint=https%3A%2F%2Funifieddatadl02azemtd.dfs.core.windows.net
 
 # loading and transforming data
-@st.cache_data
 def load_and_transform_data():
     gdf = gpd.read_file('C:\\Users\\C317851\\Downloads\\CBD_Taxi.geojson')
     pickup_df = pd.read_csv(
