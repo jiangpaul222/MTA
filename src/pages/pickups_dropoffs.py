@@ -14,14 +14,14 @@ import src.assets
 
 # loading and transforming data
 def load_and_transform_data():
-    gdf = gpd.read_file('C:\\Users\\C317851\\Downloads\\CBD_Taxi.geojson')
+    gdf = gpd.read_file('data/CBD_Taxi.geojson')
     pickup_df = pd.read_csv(
-        r'C:\Users\C317851\Downloads\map_pickup.csv', 
+        r'data/map_pickup.csv', 
         engine = 'pyarrow',
         usecols = ['service', 'month_year', 'PULocationID', 'PU_Monthly_Total', 'PU_Daily_Average']
     )
     dropoff_df = pd.read_csv(
-        r'C:\Users\C317851\Downloads\map_dropoff.csv', 
+        r'data/map_dropoff.csv', 
         engine = 'pyarrow',
         usecols = ['service', 'month_year', 'DOLocationID', 'DO_Monthly_Total', 'DO_Daily_Average']
     )
