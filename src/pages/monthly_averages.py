@@ -12,7 +12,6 @@ from datetime import datetime
 #The dataset, which is a CSV file, is sourced internally from a TLC data cleaning and aggregation script in Databricks - https://adb-6027096853111749.9.azuredatabricks.net/?o=6027096853111749#notebook/771935850484747/command/3583169199257004
 
 # loading and transforming data
-@st.cache_data
 def load_and_transform_data():
     df = pd.read_csv(
         r'C:\Users\C317851\Downloads\monthly.csv', 
