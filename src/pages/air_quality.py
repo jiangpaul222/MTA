@@ -13,7 +13,6 @@ import src.assets
 # The GeoJSON file is from after conversion of EHDP GitHub's shapefiles - https://github.com/nychealth/EHDP-data/tree/production/geography/UHF%2042
 
 # loading and transforming data
-@st.cache_data
 def load_and_transform_data():
     gdf = gpd.read_file('C:\\Users\\C317851\\Downloads\\UHF_42_DOHMH.geojson')
     data_df = pd.read_csv(
