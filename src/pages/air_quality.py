@@ -14,9 +14,9 @@ import src.assets
 
 # loading and transforming data
 def load_and_transform_data():
-    gdf = gpd.read_file('C:\\Users\\C317851\\Downloads\\UHF_42_DOHMH.geojson')
+    gdf = gpd.read_file('data/UHF_42_DOHMH.geojson')
     data_df = pd.read_csv(
-        r'C:\Users\C317851\Downloads\Outdoor_Air_and_Health_Data.csv', 
+        r'data/Outdoor_Air_and_Health_Data.csv', 
         engine = 'pyarrow'
     )
     
