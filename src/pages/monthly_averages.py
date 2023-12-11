@@ -14,7 +14,7 @@ from datetime import datetime
 # loading and transforming data
 def load_and_transform_data():
     df = pd.read_csv(
-        r'C:\Users\C317851\Downloads\monthly.csv', 
+        r'data/monthly.csv', 
         engine = 'pyarrow',
         usecols=['month_year', 'monthly_trips', 'monthly_miles', 'monthly_time', 'service']
     )
